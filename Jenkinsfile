@@ -27,7 +27,7 @@ pipeline {
 				git clone https://github.com/Veereshveer25/C-Project.git
 				fi
 				cd C-Project
-				mvn clean install
+				mvn clean install target 
 				if [ $? -eq 0 ] ; then
 				echo " Build is success "
 				scp target ec2-user@172.31.2.155:/home/ec2-user/apache-tomcat-8.5.58/webapps
